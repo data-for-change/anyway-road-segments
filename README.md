@@ -66,7 +66,6 @@ The app opens at `http://localhost:8501`
 ```
 2026/
 ├── app.py                    # Main Streamlit app
-├── download_and_run.py       # Standalone CLI script
 ├── README.md                 # This file
 ├── .env.example              # Environment variables template
 └── data/
@@ -81,14 +80,6 @@ The app opens at `http://localhost:8501`
 3. **View Statistics** - See segment/road counts and data range at the top
 4. **Download Reports** - Click download button to get all data as ZIP
 5. **Browse Data** - Use tabs to view segments or roads with key metrics visible first
-
-## Command Line Usage (Alternative)
-
-For non-interactive processing, use the CLI script:
-
-```bash
-python download_and_run.py
-```
 
 This downloads data and processes it without a web interface.
 
@@ -115,15 +106,3 @@ Both return JSON with structure: `query_result → data → rows`
 - Ensure `ROAD_SEGMENTS_URL` and `INFOGRAPHICS_URL` are set
 - Check `.env` file is in the same directory as `app.py`
 
-**No data showing:**
-- Check API credentials are valid
-- Verify internet connection
-- Check `data/output_data/` directory for CSV files
-
-**Download button not working:**
-- Ensure processing completed successfully
-- Check browser console for errors
-
-## License
-
-Data for Change (Anyway)
